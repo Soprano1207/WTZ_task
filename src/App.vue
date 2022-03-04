@@ -64,7 +64,7 @@ export default {
 
           for (let i of result.response.results) {
             // console.log(result);
-            this.unsplash.photos.getStats({ photoId: 'mtNweauBsMQ' }).then(result2 => {
+            this.unsplash.photos.getStats({ photoId: i.cover_photo.id }).then(result2 => {
               this.images.push({
                 img: i.cover_photo.urls.regular,
                 name: i.user.name,
